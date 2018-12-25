@@ -19,7 +19,7 @@ Resources:
     Properties:
       Handler: index.handler2
       Runtime: nodejs8.10
-      CodeUri: .
+      CodeUri: ./
       Description: ''
       MemorySize: 128
       Timeout: 3
