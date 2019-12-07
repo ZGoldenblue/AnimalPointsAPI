@@ -30,3 +30,19 @@ Resources:
           Properties:
             Path: /HelloWorld
             Method: ANY
+  GetScores:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: AnimalPoints.GetScores
+      Runtime: nodejs8.10
+      CodeUri: ./
+      Description: ''
+      MemorySize: 128
+      Timeout: 3
+      Role: 'arn:aws:iam::564648851972:role/AnimalPointsDynamoDB'
+      Events:
+        Api1:
+          Type: Api
+          Properties:
+            Path: /GetScores
+            Method: ANY
